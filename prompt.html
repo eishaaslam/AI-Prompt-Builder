@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI Prompt Builder</title>
+  <link rel="stylesheet" href="prompt.css">
+</head>
+<body>
+
+  <div class="box">
+    <h2>AI Prompt Tool</h2>
+
+    <label>Choose Action:</label>
+    <select id="action">
+      <option value="rewrite">Fix/Rewrite Text</option>
+      <option value="summarize">Summarize</option>
+      <option value="explain">Explain Simply</option>
+    </select>
+
+    <label>Choose Tone:</label>
+    <select id="tone">
+      <option value="Professional">Professional</option>
+      <option value="Casual">Casual</option>
+      <option value="Short">Short & Direct</option>
+    </select>
+
+    <label>Your Text:</label>
+    <textarea id="userText" placeholder="Type or paste your text here..."></textarea>
+
+    <div class="btns">
+      <button id="genBtn">Generate</button>
+      <button id="copyBtn">Copy</button>
+      <button id="saveBtn">Save</button>
+    </div>
+
+    <h3>Output:</h3>
+    <div id="result">Your output will show up here...</div>
+
+    <hr>
+    <h3>Saved Items</h3>
+    <ul id="savedItems"></ul>
+  </div>
+
+  <script src="prompt.js"></script>
+</body>
+</html>
