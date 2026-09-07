@@ -1,92 +1,114 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap');
 
 body {
+  margin: 0;
+  padding: 24px;
+  min-height: 100vh;
+
   background-color: #030712;
-  background-image: radial-gradient(circle at 10% 20%, rgba(99, 102, 241, 0.15) 0%, transparent 40%), radial-gradient(circle at 90% 80%, rgba(168, 85, 247, 0.15) 0%, transparent 40%);
+  background-image:
+    radial-gradient(circle at 10% 20%, rgba(99, 102, 241, 0.15), transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(168, 85, 247, 0.15), transparent 40%);
+
   color: #f3f4f6;
   font-family: 'Space Grotesk', sans-serif;
-  margin: 0;
-  min-height: 100vh;
+
   display: flex;
-  align-items: center;
   justify-content: center;
-  padding: 24px;
+  align-items: center;
 }
 
 .box {
-  max-width: 620px;
   width: 100%;
-  background: rgba(15, 23, 42, 0.75);
+  max-width: 620px;
   padding: 40px;
+
+  background: rgba(15, 23, 42, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 28px;
+
   box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+
   position: relative;
   overflow: hidden;
 }
 
 .box::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
+
+  width: 100%;
   height: 2px;
-  background: linear-gradient(90deg, #6366f1, #a855f7, #ec4899);
+
+  background: linear-gradient(to right, #6366f1, #a855f7, #ec4899);
 }
 
+/* Headings */
+
 h2 {
+  margin: 0 0 24px;
   font-size: 1.75rem;
   font-weight: 700;
-  color: #fff;
-  margin: 0 0 24px;
-  background: linear-gradient(135deg, #fff 30%, #94a3b8 100%);
+
+  background: linear-gradient(135deg, #ffffff 30%, #94a3b8);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  display: inline-block;
 }
 
 h3 {
+  margin-top: 32px;
+  margin-bottom: 10px;
+
   font-size: 1.15rem;
-  font-weight: 700;
-  color: #fff;
-  margin: 32px 0 10px;
+  color: white;
 }
+
+/* Form fields */
 
 label {
   display: block;
   margin-top: 20px;
+
+  color: #a5b4fc;
   font-size: 0.8rem;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: #a5b4fc;
+  letter-spacing: 1px;
 }
 
-select, textarea {
+select,
+textarea {
   width: 100%;
-  background: rgba(30, 41, 59, 0.4);
+  box-sizing: border-box;
+
+  margin-top: 8px;
+  padding: 14px 18px;
+
+  background-color: rgba(30, 41, 59, 0.4);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 14px;
-  padding: 14px 18px;
-  color: #fff;
+
+  color: white;
   font-family: inherit;
   font-size: 0.95rem;
-  margin-top: 8px;
-  box-sizing: border-box;
-  transition: all 0.2s ease;
+
+  transition: 0.2s;
 }
 
 select option {
-  background: #0f172a;
-  color: #fff;
+  background-color: #0f172a;
+  color: white;
 }
 
-select:focus, textarea:focus {
+select:focus,
+textarea:focus {
   outline: none;
   border-color: #818cf8;
-  background: rgba(30, 41, 59, 0.7);
+  background-color: rgba(30, 41, 59, 0.7);
+
   box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.25);
 }
 
@@ -95,6 +117,8 @@ textarea {
   resize: vertical;
 }
 
+/* Buttons */
+
 .btns {
   display: flex;
   gap: 12px;
@@ -102,14 +126,17 @@ textarea {
 }
 
 button {
-  cursor: pointer;
+  padding: 12px 24px;
+
   border: none;
   border-radius: 14px;
-  padding: 12px 24px;
+
+  cursor: pointer;
   font-family: inherit;
   font-size: 0.92rem;
   font-weight: 600;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  transition: 0.2s;
 }
 
 button:hover {
@@ -122,7 +149,8 @@ button:active {
 
 #genBtn {
   background: linear-gradient(135deg, #6366f1, #8b5cf6);
-  color: #fff;
+  color: white;
+
   box-shadow: 0 8px 25px rgba(99, 102, 241, 0.45);
 }
 
@@ -130,25 +158,33 @@ button:active {
   box-shadow: 0 12px 30px rgba(99, 102, 241, 0.65);
 }
 
-#copyBtn, #saveBtn {
-  background: rgba(255, 255, 255, 0.05);
+#copyBtn,
+#saveBtn {
+  background-color: rgba(255, 255, 255, 0.05);
   color: #e2e8f0;
+
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-#copyBtn:hover, #saveBtn:hover {
-  background: rgba(255, 255, 255, 0.1);
-  color: #fff;
+#copyBtn:hover,
+#saveBtn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+
   border-color: rgba(255, 255, 255, 0.2);
 }
 
+/* Result section */
+
 #result {
-  background: rgba(3, 7, 18, 0.6);
+  margin-top: 16px;
+  padding: 20px;
+  min-height: 70px;
+
+  background-color: rgba(3, 7, 18, 0.6);
   border: 1px solid rgba(255, 255, 255, 0.06);
   border-radius: 14px;
-  padding: 20px;
-  margin-top: 16px;
-  min-height: 70px;
+
   color: #cbd5e1;
   font-size: 0.95rem;
 }
